@@ -1,0 +1,7 @@
+<h2>Items</h2>
+<ul class="items">
+  <li *ngFor="let item of items">
+    {{item.name}} <span *ngIf="!item.id; else itemIdBlock">*</span><ng-template #itemIdBlock>(ID={{item.id}})</ng-template>
+  </li>
+  <button (click)="addItem()">New Item</button>
+</ul>
