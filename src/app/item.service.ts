@@ -4,7 +4,6 @@ import { fromPromise } from 'rxjs/observable/fromPromise';
 import { mergeMap } from 'rxjs/operator/mergeMap';
 import {AngularIndexedDB} from 'angular2-indexeddb';
 import { Item } from './item';
-import { ITEMS } from './mock-items';
 import { EventEmitter } from '@angular/core';
 
 @Injectable()
