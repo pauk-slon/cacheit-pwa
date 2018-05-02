@@ -1,7 +1,6 @@
-<h2>Items</h2>
+<h2>Items <button (click)="addItem()">+</button></h2>
 <ul class="items">
   <li *ngFor="let item of items">
-    {{item.name}} <span *ngIf="!item.id; else itemIdBlock">*</span><ng-template #itemIdBlock>(ID={{item.id}})</ng-template>
+    {{item.name}} <span *ngIf="!item.id; else itemIdBlock">*</span><ng-template #itemIdBlock>(ID={{item.id}}) <button (click)="deleteItem(item)">-</button></ng-template>
   </li>
-  <button (click)="addItem()">New Item</button>
 </ul>

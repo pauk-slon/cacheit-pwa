@@ -16,6 +16,9 @@ export class ItemsComponent implements OnInit {
   ngOnInit() {
     this.getItems();
     this.itemService.added.subscribe(item => this.items.push(item));
+    this.itemService.deleted.subscribe(item => {
+      this.items = this.items.filter(element => element.id !== item.id);
+    });
   }
 
   getItems(): void {
@@ -28,5 +31,9 @@ export class ItemsComponent implements OnInit {
       name: Math.random().toString(36).substring(2, 12),
     };
     this.itemService.add(newItem);
+  }
+
+  deleteItem(item: Item) {
+    this.itemService.delete(item);
   }
 }
