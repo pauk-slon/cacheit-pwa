@@ -7,10 +7,19 @@ export class Item {
     public name: string;
     public type: string;
     private data: ArrayBuffer;
+    private _url: string;
 
     private constructor() {}
 
     get size(): number { return this.data.byteLength; }
+
+    get url(): string {
+        if (!this._url) {
+            const blob = new Blob([new Uint8Array(this.data)], {type: this.type});
+            this._url = URL.createObjectURL(blob);
+        }
+        return this._url;
+    }
 
     static loadFromFile(file: File): Observable<Item> {
         return Observable.create((observer) => {

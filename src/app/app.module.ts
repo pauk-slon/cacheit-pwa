@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemService } from './item.service';
+import { SafeUrlPipe } from './safe-url.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsComponent
+    ItemsComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule
