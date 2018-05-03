@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { fromPromise } from 'rxjs/observable/fromPromise';
+import { map } from 'rxjs/operators';
 import { mergeMap } from 'rxjs/operator/mergeMap';
 import {AngularIndexedDB} from 'angular2-indexeddb';
 import { Item } from './item';
@@ -8,10 +9,10 @@ import { EventEmitter } from '@angular/core';
 
 @Injectable()
 export class ItemService {
-  _db: AngularIndexedDB;
-  readonly _dbName: string = 'CacheitDb';
-  readonly _storeName: string = 'item';
-  readonly _storeOptions: object = { keyPath: 'id', autoIncrement: true };
+  private _db: AngularIndexedDB;
+  private readonly _dbName: string = 'CacheitDb';
+  private readonly _storeName: string = 'item';
+  private readonly _storeOptions: object = { keyPath: 'id' };
   private readonly _added: EventEmitter<Item> = new EventEmitter();
   private readonly _deleted: EventEmitter<Item> = new EventEmitter();
 
@@ -37,7 +38,8 @@ export class ItemService {
   getAll(): Observable<Item[]> {
     const open$ =  this._openDb();
     return mergeMap.call(open$, () => {
-      return fromPromise(this._db.getAll(this._storeName));
+      return fromPromise(this._db.getAll(this._storeName))
+        .pipe(map((objects: Object[]) => objects.map(object => Item.loadFromObject(object))));
     });
   }
 

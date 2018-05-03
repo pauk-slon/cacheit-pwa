@@ -1,6 +1,20 @@
-<h2>Items <button (click)="addItem()">+</button></h2>
-<ul class="items">
-  <li *ngFor="let item of items">
-    {{item.name}} <span *ngIf="!item.id; else itemIdBlock">*</span><ng-template #itemIdBlock>(ID={{item.id}}) <button (click)="deleteItem(item)">-</button></ng-template>
-  </li>
-</ul>
+<h2>Items</h2>
+<input type="file" (change)="addItem($event.target.files[0])">
+<table>
+  <thead>
+    <tr>
+      <th>*</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of items">
+          <td><button (click)="deleteItem(item)">-</button></td>
+          <td>{{item.name}}</td>
+          <td>{{item.type}}</td>
+          <td>{{item.size}}</td>
+        </tr>
+  </tbody>
+</table>

@@ -26,11 +26,8 @@ export class ItemsComponent implements OnInit {
         .subscribe(items => this.items = items);
   }
 
-  addItem(): void {
-    const newItem = {
-      name: Math.random().toString(36).substring(2, 12),
-    };
-    this.itemService.add(newItem);
+  addItem(file: File): void {
+    Item.loadFromFile(file).subscribe(item => this.itemService.add(item));
   }
 
   deleteItem(item: Item) {
