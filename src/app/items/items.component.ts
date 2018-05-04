@@ -10,8 +10,9 @@ import { ItemService } from '../item.service';
 export class ItemsComponent implements OnInit {
 
   items: Item[];
+  activeItem: Item;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) {}
 
   ngOnInit() {
     this.getItems();
@@ -22,8 +23,12 @@ export class ItemsComponent implements OnInit {
   }
 
   getItems(): void {
-    this.itemService.getAll()
-        .subscribe(items => this.items = items);
+    this.itemService.getAll().subscribe(items => {
+      this.items = items;
+      if (this.items.length) {
+        this.activeItem = this.items[0];
+      }
+    });
   }
 
   addItem(file: File): void {
@@ -32,5 +37,9 @@ export class ItemsComponent implements OnInit {
 
   deleteItem(item: Item) {
     this.itemService.delete(item);
+  }
+
+  viewItem(item: Item) {
+    this.activeItem = item;
   }
 }

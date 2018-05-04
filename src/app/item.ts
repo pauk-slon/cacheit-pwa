@@ -15,8 +15,8 @@ export class Item {
 
     get url(): string {
         if (!this._url) {
-            const blob = new Blob([new Uint8Array(this.data)], {type: this.type});
-            this._url = URL.createObjectURL(blob);
+            const file = new File([this.data], this.name, {type: this.type});
+            this._url = URL.createObjectURL(file);
         }
         return this._url;
     }
