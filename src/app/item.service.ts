@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { fromPromise } from 'rxjs/observable/fromPromise';
-import { map } from 'rxjs/operators';
-import { mergeMap } from 'rxjs/operator/mergeMap';
+import { Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { fromPromise } from 'rxjs/internal/observable/fromPromise';
+
 import {AngularIndexedDB} from 'angular2-indexeddb';
 import { Item } from './item';
 import { EventEmitter } from '@angular/core';
@@ -36,11 +36,10 @@ export class ItemService {
   }
 
   getAll(): Observable<Item[]> {
-    const open$ =  this._openDb();
-    return mergeMap.call(open$, () => {
-      return fromPromise(this._db.getAll(this._storeName))
-        .pipe(map((objects: Object[]) => objects.map(object => Item.loadFromObject(object))));
-    });
+    return this._openDb().pipe(
+      mergeMap(db => fromPromise(this._db.getAll(this._storeName))),
+      map(objects => objects.map(object => Item.loadFromObject(object))),
+    );
   }
 
   add(item: Item): void {

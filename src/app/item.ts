@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs/Observable';
-import { fromEvent } from 'rxjs/observable/fromEvent';
+import { Observable ,  fromEvent } from 'rxjs';
 
 
 export class Item {
