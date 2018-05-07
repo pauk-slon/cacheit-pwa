@@ -34,7 +34,7 @@
     <!-- Size Column -->
     <ng-container matColumnDef="size">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Size</mat-header-cell>
-      <mat-cell *matCellDef="let item">{{item.size}}</mat-cell>
+      <mat-cell *matCellDef="let item">{{item.size|byteSize}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

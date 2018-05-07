@@ -20,6 +20,7 @@ import { ItemTableComponent } from './item-table/item-table.component';
 import { ItemViewComponent } from './item-view/item-view.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ByteSizePipe } from './byte-size.pipe';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
     SafeUrlPipe,
     ItemTableComponent,
     ItemViewComponent,
+    ByteSizePipe,
   ],
   entryComponents: [
     ItemViewComponent
