@@ -1,18 +1,18 @@
 {
   "configVersion": 1,
-  "index": "/cacheit-spa/index.html",
+  "index": "/cacheit-pwa/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/cacheit-spa/favicon.ico",
-        "/cacheit-spa/index.html",
-        "/cacheit-spa/main.10f498a9e6dfe43fb49c.js",
-        "/cacheit-spa/polyfills.f6ee50a739512b59f955.js",
-        "/cacheit-spa/runtime.6afe30102d8fe7337431.js",
-        "/cacheit-spa/styles.d1dedd4953144916f04a.css"
+        "/cacheit-pwa/favicon.ico",
+        "/cacheit-pwa/index.html",
+        "/cacheit-pwa/main.10f498a9e6dfe43fb49c.js",
+        "/cacheit-pwa/polyfills.f6ee50a739512b59f955.js",
+        "/cacheit-pwa/runtime.6afe30102d8fe7337431.js",
+        "/cacheit-pwa/styles.d1dedd4953144916f04a.css"
       ],
       "patterns": []
     },
@@ -21,34 +21,34 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/cacheit-spa/assets/icons/icon-128x128.png",
-        "/cacheit-spa/assets/icons/icon-144x144.png",
-        "/cacheit-spa/assets/icons/icon-152x152.png",
-        "/cacheit-spa/assets/icons/icon-192x192.png",
-        "/cacheit-spa/assets/icons/icon-384x384.png",
-        "/cacheit-spa/assets/icons/icon-512x512.png",
-        "/cacheit-spa/assets/icons/icon-72x72.png",
-        "/cacheit-spa/assets/icons/icon-96x96.png"
+        "/cacheit-pwa/assets/icons/icon-128x128.png",
+        "/cacheit-pwa/assets/icons/icon-144x144.png",
+        "/cacheit-pwa/assets/icons/icon-152x152.png",
+        "/cacheit-pwa/assets/icons/icon-192x192.png",
+        "/cacheit-pwa/assets/icons/icon-384x384.png",
+        "/cacheit-pwa/assets/icons/icon-512x512.png",
+        "/cacheit-pwa/assets/icons/icon-72x72.png",
+        "/cacheit-pwa/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/cacheit-spa/favicon.ico": "411564130a3bac81294baa2224a763d5560a954b",
-    "/cacheit-spa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/cacheit-spa/index.html": "c98c4dcdc618c29b8db6d2884fd4e237e8b91c6d",
-    "/cacheit-spa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/cacheit-spa/main.10f498a9e6dfe43fb49c.js": "53e22ad28d12c989c17fdac32361ef4ddce34082",
-    "/cacheit-spa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/cacheit-spa/polyfills.f6ee50a739512b59f955.js": "f3b1282e8292e0990317d22a3557186bbe730be5",
-    "/cacheit-spa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/cacheit-spa/runtime.6afe30102d8fe7337431.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/cacheit-spa/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/cacheit-spa/styles.d1dedd4953144916f04a.css": "7883f5fe1585db062e5fd174dcac30df05019c49",
-    "/cacheit-spa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/cacheit-spa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/cacheit-spa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41"
+    "/cacheit-pwa/favicon.ico": "411564130a3bac81294baa2224a763d5560a954b",
+    "/cacheit-pwa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/cacheit-pwa/index.html": "ce9850fceedc42cf96574e83f1aad820aa9e62cf",
+    "/cacheit-pwa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/cacheit-pwa/main.10f498a9e6dfe43fb49c.js": "53e22ad28d12c989c17fdac32361ef4ddce34082",
+    "/cacheit-pwa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/cacheit-pwa/polyfills.f6ee50a739512b59f955.js": "f3b1282e8292e0990317d22a3557186bbe730be5",
+    "/cacheit-pwa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/cacheit-pwa/runtime.6afe30102d8fe7337431.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/cacheit-pwa/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/cacheit-pwa/styles.d1dedd4953144916f04a.css": "7883f5fe1585db062e5fd174dcac30df05019c49",
+    "/cacheit-pwa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/cacheit-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/cacheit-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41"
   },
   "navigationUrls": [
     {
