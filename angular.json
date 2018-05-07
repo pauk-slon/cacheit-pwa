@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cacheit-spa": {
+    "cacheit-pwa": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -53,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cacheit-spa:build"
+            "browserTarget": "cacheit-pwa:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cacheit-spa:build:production"
+              "browserTarget": "cacheit-pwa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cacheit-spa:build"
+            "browserTarget": "cacheit-pwa:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "cacheit-spa-e2e": {
+    "cacheit-pwa-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -111,7 +111,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "cacheit-spa:serve"
+            "devServerTarget": "cacheit-pwa:serve"
           }
         },
         "lint": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "defaultProject": "cacheit-spa",
+  "defaultProject": "cacheit-pwa",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

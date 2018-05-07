@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('cacheit-spa App', () => {
+describe('cacheit-pwa App', () => {
   let page: AppPage;
 
   beforeEach(() => {
