@@ -9,7 +9,7 @@
       "urls": [
         "/cacheit-spa/favicon.ico",
         "/cacheit-spa/index.html",
-        "/cacheit-spa/main.74df28d7aadbeb3b2602.js",
+        "/cacheit-spa/main.84d80bb90be6eff6ce8c.js",
         "/cacheit-spa/polyfills.f6ee50a739512b59f955.js",
         "/cacheit-spa/runtime.6afe30102d8fe7337431.js",
         "/cacheit-spa/styles.d1dedd4953144916f04a.css"
@@ -37,9 +37,9 @@
   "hashTable": {
     "/cacheit-spa/favicon.ico": "411564130a3bac81294baa2224a763d5560a954b",
     "/cacheit-spa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/cacheit-spa/index.html": "257ebbf737c68d6e1ed466f3501ff5022fa80be1",
+    "/cacheit-spa/index.html": "590e339e64c749e2c44d634f732542b49483399a",
     "/cacheit-spa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/cacheit-spa/main.74df28d7aadbeb3b2602.js": "282fc91da4026a46e013c2a81a1780c1c1eb22f9",
+    "/cacheit-spa/main.84d80bb90be6eff6ce8c.js": "706268739d2698d2b43e454620268252e058335c",
     "/cacheit-spa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
     "/cacheit-spa/polyfills.f6ee50a739512b59f955.js": "f3b1282e8292e0990317d22a3557186bbe730be5",
     "/cacheit-spa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
