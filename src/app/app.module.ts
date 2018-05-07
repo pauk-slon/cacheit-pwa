@@ -18,6 +18,8 @@ import { ItemService } from './item.service';
 import { SafeUrlPipe } from './safe-url.pipe';
 import { ItemTableComponent } from './item-table/item-table.component';
 import { ItemViewComponent } from './item-view/item-view.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { ItemViewComponent } from './item-view/item-view.component';
     MatSidenavModule,
     MatIconModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ItemService
