@@ -3,13 +3,20 @@
       <input type="file" (change)="addItem($event.target.files[0])">
   </div>
     
-  <mat-table #table [dataSource]="dataSource" matSort aria-label="Items">
+  <mat-table #table [dataSource]="dataSource" matSort aria-label="Items" [ngClass]="{'handset': (isHandset | async)!.matches}">
     <!-- Actions Column -->
     <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
         <mat-cell *matCellDef="let item">
-          <button (click)="deleteItem(item)" mat-button>Delete</button>
-          <button (click)="viewItem(item)" mat-button>View</button>
+          <a [href]="item.url|safeUrl" target="_blank" mat-icon-button>
+            <mat-icon aria-label="Open in a new page">open_in_new</mat-icon>
+          </a>
+          <button (click)="viewItem(item)" mat-icon-button *ngIf="!(isHandset | async)!.matches">
+            <mat-icon aria-label="View">open_in_browser</mat-icon>
+          </button>
+          <button (click)="deleteItem(item)" mat-icon-button>
+            <mat-icon aria-label="Delete">delete_forever</mat-icon>
+          </button>
         </mat-cell>
       </ng-container>
 
