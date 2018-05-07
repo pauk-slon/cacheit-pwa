@@ -1,3 +1,19 @@
 .item-upload {
     padding: 8px;
 }
+
+.mat-column-name {
+    flex: 0 0 50%;
+}
+
+.mat-column-actions {
+    flex: 0 0 7em;
+}
+
+.handset .mat-column-name {
+    flex: 0 0 70%;
+}
+
+.handset .mat-column-actions {
+    flex: 0 0 5em;
+}
